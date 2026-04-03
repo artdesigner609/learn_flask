@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>This is demo HTML template</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+{% extends "base.html" %}
+
+{% block title %} Engineer Details {% endblock %}
+
+{% block content%}
+
         <h1>Welcome to the HTML template</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quae saepe ipsum facilis eveniet. Atque, accusantium, iste totam, excepturi recusandae ad vitae ex cum facere odio quasi suscipit architecto veniam!</p>
-        <script src="" async defer></script>
-    </body>
-</html>
+        <p>Here are some detail of the engineer.</p>
+        <ul>
+            {% for key, value in context.items() %}
+            <li><strong>{{ key|capitalize }}:</strong> {{ value }}</li>
+            {% endfor%}            
+        </ul>
+        <a href="{{ url_for('about') }}">About Me</a>
+
+{% endblock %}
