@@ -6,10 +6,14 @@ Learning Flask from Beginner to Development from NeuaralNine
 mkdir project_name
 ```
 ### create virtual environemnt
-```python
+```bash
 python3 -m venv .venv
 ```
 ### activate virtual environment
-```python
+```bash
 source .venv/bin/activate
+```
+### see installed packages inside virtual environment
+```bash
+pip3 freeze
 ```
