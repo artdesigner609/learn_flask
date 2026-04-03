@@ -1,18 +1,15 @@
 # learn_flask
 Learning Flask from Beginner to Development from NeuaralNine
 
-### make project directory
+### create project directory
 ```bash
 mkdir project_name
 ```
-
-### Install Virtual Environemnt
+### create virtual environemnt
 ```python
 python3 -m venv .venv
 ```
-### activate Virtual environment
+### activate virtual environment
 ```python
 source .venv/bin/activate
 ```
-
-
