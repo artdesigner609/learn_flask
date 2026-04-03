@@ -43,3 +43,4 @@ pip3 install -r requirements.txt
 - for getting data from URL use GET
 - to submit or change/update data to the db use PUT
 - to delte data use delete
+1:19:31
