@@ -1,18 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %} Session and Ccookies {% endblock %}
+{% block title %} Session and Cookies {% endblock %}
 
 {% block content%}
 
         <h1>Session and Cookies</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quae saepe ipsum facilis eveniet. Atque, accusantium, iste totam, excepturi recusandae ad vitae ex cum facere odio quasi suscipit architecto veniam!</p>
-        <p class="special">Here are some detail of the engineer.</p>
-        <img src="/img/sushi.jpg" alt="Sushi" sizes="" srcset="" width="800" height="500"> <br>
-
         <p><strong>Message:</strong> {{ message }}</p>
         <a href="{{ url_for('home') }}">Home</a> <br>
         <a href="{{ url_for('set_session_data') }}">Set Session Data</a> <br>
         <a href="{{ url_for('get_session_data') }}">Get Session Data</a> <br>
         <a href="{{ url_for('clear_session_data') }}">Clear Session Data</a> <br>
-        
+
+        <a href="{{ url_for('set_cookie') }}">Set Session Cookie</a> <br>
+        <a href="{{ url_for('get_session_cookie') }}">Get Session Cookie</a> <br>
+        <a href="{{ url_for('clear_session_cookie') }}">Clear Session Cookie</a> <br>
+        <a href="{{ url_for('login') }}">Login Here</a> <br>
+
 {% endblock %}

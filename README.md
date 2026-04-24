@@ -1,5 +1,6 @@
-# learn_flask
+# Learn Flask with NeuralNine
 Learning Flask from Beginner to Development from NeuaralNine
+[Course Link](https://youtu.be/oQ5UfJqW5Jo?si=2sLHY_I55FEr2cKs&t=7111)
 
 - create github repository
 - clone github repository in the folder
@@ -43,4 +44,3 @@ pip3 install -r requirements.txt
 - for getting data from URL use GET
 - to submit or change/update data to the db use PUT
 - to delte data use delete
-1:19:31

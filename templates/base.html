@@ -19,6 +19,19 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="container text-center">
-        {% block content %} {% endblock %}
+
+            {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                            <div class="alert alert-success" role="alert">
+                                {{ message }}
+                            </div>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+            {% endwith %}
+
+            {% block content %} {% endblock %}
+            {% include "footer.html" %}
         </div>
-        {% include "footer.html" %}
