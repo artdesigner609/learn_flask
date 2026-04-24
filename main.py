@@ -2,21 +2,25 @@ from flask import Flask, request, make_response, render_template, redirect, url_
 
 app = Flask(__name__, template_folder='templates')
 
-#add default route
+# add default route
+
+
 @app.route('/', methods=['GET'])
-def home():
-    eng_desc = {
-        'name' : 'John Doe',
-        'age' : 30,
-        'city' : 'New York',
-        'salary' : 50000,
-        'education' : 'Computer Science'
+def home() -> str:
+    eng_desc: dict[str, Any] = {
+        'name': 'John Doe',
+        'age': 30,
+        'city': 'New York',
+        'salary': 50000,
+        'education': 'Computer Science'
     }
     return render_template('index.html', context=eng_desc)
 
-#add aboutme route
+# add aboutme route
+
+
 @app.route('/about', methods=['GET'])
-def about():
+def about() -> str:
     return render_template('about.html')
 
 

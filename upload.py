@@ -7,9 +7,12 @@ import pandas as pd
 app = Flask(__name__)
 
 UPLOAD_SUBDIR = os.path.join('templates', 'uploaded_files')
+
+
 @app.route('/', methods=['GET'])
 def home():
     return render_template('upload.html')
+
 
 def ensure_upload_dir():
     base = current_app.root_path  # app root path
@@ -17,11 +20,13 @@ def ensure_upload_dir():
     os.makedirs(upload_dir, exist_ok=True)
     return upload_dir
 
+
 def timestamped_filename(original_filename):
     name = secure_filename(original_filename)
     stem, ext = os.path.splitext(name)
     ts = datetime.utcnow().strftime('%Y-%m-%d-%H-%M-%S-UTC')  # YYYY-MM-DD-HH-MM-SS-UTC
     return f"{stem}-{ts}{ext}"
+
 
 @app.route('/upload_file', methods=['POST'])
 def upload_file():
@@ -53,5 +58,6 @@ def upload_file():
 
     return f"File uploaded: {new_name}\nUnsupported file type: {ctype}", 400
 
+
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5555, debug=True)
+    app.run(host='127.0.0.1', port=5555, debug=True)
